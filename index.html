@@ -1,10 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Waheed Naseri - Portfolio</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1 {
+            color: #333;
+            font-size: 48px;
+        }
+        p {
+            color: #666;
+            font-size: 24px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        #about {
+            margin-top: 50px;
+        }
+        #about h2 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        #about p {
+            color: #555;
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        #projects {
+            margin-top: 50px;
+        }
+        #projects h2 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project h3 {
+            color: #222;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .project p {
+            color: #555;
+            font-size: 18px;
+        }
+        #contact {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        #contact h2 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        #contact p {
+            color: #555;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, I'm Waheed Naseri</h1>
-    <p>Welcome to my portfolio website!</p>
+    <img src="profile.jpg" alt="Waheed Naseri" class="profile-pic">
+    <h1>Hello, I am Waheed Naseri</h1>
+    <p>Welcome to my portfolio website</p>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am Waheed Naseri, a passionate web developer. I love building beautiful and functional websites. Welcome to my portfolio where I share my work and ideas!</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>This is my personal portfolio website where I showcase my skills and projects.</p>
+        </div>
+
+        <div class="project">
+            <h3>Project 2: Web Scraper</h3>
+            <p>A Python web scraper that collects data from websites and organizes it neatly.</p>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to work together or have any questions, feel free to reach out!</p>
+
+        <div class="contact-info">
+            <p>Email: <a href="mailto:waheed.naseri@example.com">waheed.naseri@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/your-github-username" target="_blank">github.com/your-github-username</a></p>
+        </div>
+    </section>
+
 </body>
 </html>
