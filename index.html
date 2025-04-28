@@ -1,265 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Waheed Naseri - Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waheed Naseri - Python Developer</title>
+  
+  <meta name="description" content="Waheed Naseri | Python Developer specializing in web scraping, automation, and data cleaning.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-        body {
-            background: linear-gradient(to right, #e0eafc, #cfdef3);
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            padding-top: 150px;
-            margin: 0;
-        }
-
-        /* Navbar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #222;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            padding: 15px 20px;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        nav a:hover {
-            color: #00bcd4;
-        }
-
-        /* Hamburger */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: #fff;
-            margin: 4px;
-            transition: 0.4s;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                flex-direction: column;
-                background-color: #222;
-                display: none;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-        }
-
-        h1 {
-            color: #222;
-            font-size: 48px;
-            margin-top: 20px;
-        }
-        p {
-            color: #555;
-            font-size: 24px;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        section {
-            margin-top: 50px;
-        }
-        #about h2, #projects h2, #contact h2 {
-            color: #222;
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        #about p, #contact p {
-            color: #555;
-            font-size: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        .project {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 700px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-        }
-        .project h3 {
-            color: #333;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-        .project p {
-            color: #666;
-            font-size: 18px;
-        }
-        .contact-info a {
-            color: #00bcd4;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .download-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #00bcd4;
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background-color 0.3s;
-        }
-        .download-btn:hover {
-            background-color: #0097a7;
-        }
-
-        /* Scroll to Top Button */
-        #scrollTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 100;
-            background-color: #00bcd4;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 50%;
-            font-size: 18px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: background-color 0.3s;
-        }
-        #scrollTopBtn:hover {
-            background-color: #0097a7;
-        }
-    </style>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: #222;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    nav a:hover {
+      color: #00bcd4;
+    }
+    header {
+      text-align: center;
+      padding: 150px 20px 60px;
+      animation: fadeIn 2s ease;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 42px;
+      color: #222;
+    }
+    p {
+      font-size: 20px;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .project {
+      background: #fff;
+      margin: 20px auto;
+      max-width: 700px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .project-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+    .project-btn:hover {
+      background: #0097a7;
+    }
+    .contact-info a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+    footer {
+      padding: 20px;
+      background: #222;
+      color: #bbb;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="nav-links" id="navLinks">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <header>
     <img src="profile.jpg" alt="Waheed Naseri" class="profile-pic">
-    <h1>Hello, I am Waheed Naseri</h1>
-    <p>Welcome to my portfolio website</p>
+    <h1>Hi, I'm Waheed Naseri</h1>
+    <p>Python Developer focused on automation, web scraping, and data cleaning.</p>
+  </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I’m Waheed Naseri, a passionate Python developer specializing in automation, web scraping, and data cleaning. I enjoy solving real-world problems by automating repetitive tasks and extracting valuable insights from data. With a solid understanding of Python and its libraries, I aim to streamline processes and help businesses make data-driven decisions. I’m continuously learning and excited to work on new, challenging projects.</p>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m passionate about solving real-world problems through automation and data. I specialize in Python projects that scrape, clean, and organize information efficiently for businesses.</p>
+  </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+  <section id="projects">
+    <h2>Projects</h2>
 
-        <div class="project">
-            <h3>Project 1: Portfolio Website</h3>
-            <p>This is my personal portfolio website where I showcase my skills and projects.</p>
-        </div>
+    <div class="project">
+      <h3>Web Scraping Tool</h3>
+      <p>Developed a Python scraper to collect structured data from multiple websites and APIs.</p>
+      <a href="https://github.com/yourprojectlink" class="project-btn" target="_blank">View Code</a>
+    </div>
 
-        <div class="project">
-            <h3>Project 2: Web Scraper</h3>
-            <p>A Python web scraper that collects data from websites and organizes it neatly.</p>
-        </div>
+    <div class="project">
+      <h3>Data Cleaning Automation</h3>
+      <p>Built a script that automates cleaning and organizing messy datasets into actionable insights.</p>
+      <a href="https://github.com/yourprojectlink" class="project-btn" target="_blank">View Code</a>
+    </div>
 
-        <div class="project">
-            <h3>Project 3: Weather App</h3>
-            <p>A simple web application that shows real-time weather data using an API.</p>
-        </div>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>This responsive portfolio you’re browsing now is made with pure HTML, CSS, and a little JavaScript!</p>
+      <a href="https://github.com/waheednaseri/waheednaseri.github.io" class="project-btn" target="_blank">View Code</a>
+    </div>
 
-    </section>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you would like to work together or have any questions, feel free to reach out!</p>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to work with me or have questions, feel free to reach out!</p>
 
-        <div class="contact-info">
-            <p>Email: <a href="mailto:waheed.reyhan@gmail.com">waheed.reyhan@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/waheednaseri/waheednaseri.github.io" target="_blank">github.com/waheednaseri/waheednaseri.github.io</a></p>
-        </div>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:waheed.reyhan@gmail.com">waheed.reyhan@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/waheednaseri" target="_blank">github.com/waheednaseri</a></p>
+      <p><a href="resume.pdf" download class="project-btn">Download Resume</a></p>
+    </div>
+  </section>
 
-        <p>
-            <a href="resume.pdf" download class="download-btn">Download My Resume</a>
-        </p>
-    </section>
-
-    <!-- Scroll To Top Button -->
-    <button onclick="scrollToTop()" id="scrollTopBtn">&#8679;</button>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Scroll to Top Button Script
-        let scrollTopBtn = document.getElementById("scrollTopBtn");
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollTopBtn.style.display = "block";
-            } else {
-                scrollTopBtn.style.display = "none";
-            }
-        }
-
-        function scrollToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
+  <footer>
+    &copy; 2025 Waheed Naseri | All Rights Reserved
+  </footer>
 
 </body>
 </html>
