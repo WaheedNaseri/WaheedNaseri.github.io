@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Waheed Naseri - Python Developer</title>
 
   <meta name="description" content="Waheed Naseri | Python Developer specializing in web scraping, automation, and data cleaning.">
@@ -24,10 +24,6 @@
       background: linear-gradient(to right, #e0eafc, #cfdef3);
       scroll-behavior: smooth;
       transition: background 0.3s, color 0.3s;
-    }
-    body.dark-mode {
-      background: #121212;
-      color: #e0e0e0;
     }
     nav {
       position: fixed;
@@ -99,12 +95,6 @@
       margin: 0 auto;
       line-height: 1.8;
     }
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode p {
-      color: #e0e0e0;
-    }
     section {
       padding: 80px 20px;
       text-align: center;
@@ -120,29 +110,19 @@
     }
     .project:hover {
       transform: translateY(-5px);
-    }.project-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #00bcd4;
-  color: white; /* Make sure text is always white */
-  border-radius: 30px;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
-}
-
-.project-btn:hover {
-  background: #0097a7;
-}
-
-body.dark-mode .project-btn {
-  color: #fff; /* Ensure text is white in dark mode */
-}
-
-body.dark-mode .project-btn:hover {
-  background: #007c82; /* Darker hover color in dark mode */
-}
-
+    }
+    .project-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .project-btn:hover {
+      background: #0097a7;
     }
     .contact-info a {
       color: #00bcd4;
@@ -153,6 +133,45 @@ body.dark-mode .project-btn:hover {
       background: #222;
       color: #bbb;
       font-size: 14px;
+    }
+
+    /* ==========================
+       Dark Mode Theme Styling
+       ========================== */
+    body.dark-mode {
+      background-color: #121212;
+      color: #B0BEC5;
+    }
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3 {
+      color: #90CAF9;
+    }
+    body.dark-mode p {
+      color: #B0BEC5;
+    }
+    body.dark-mode .project {
+      background-color: #1E1E1E;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    body.dark-mode .project h3 {
+      color: #90CAF9;
+    }
+    body.dark-mode .project p {
+      color: #B0BEC5;
+    }
+    body.dark-mode .project-btn {
+      background-color: #00BCD4;
+      color: white;
+    }
+    body.dark-mode .project-btn:hover {
+      background-color: #0097A7;
+    }
+    body.dark-mode a {
+      color: #81D4FA;
+    }
+    body.dark-mode hr {
+      border-color: #263238;
     }
   </style>
 </head>
@@ -166,7 +185,7 @@ body.dark-mode .project-btn:hover {
   </nav>
 
   <header>
-    <img src="profile.webp" alt="Waheed Naseri" class="profile-pic" loading="lazy">
+    <img src="profile.webp" alt="Waheed Naseri" class="profile-pic" loading="lazy" />
     <h1><img src="favicon.ico" alt="Logo" style="width:24px; vertical-align:middle; margin-right:8px;">Hi, I'm Waheed Naseri</h1>
     <p>Python Developer focused on automation, web scraping, and data cleaning.</p>
   </header>
@@ -214,8 +233,6 @@ body.dark-mode .project-btn:hover {
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       AOS.init();
-      
-      // Smooth scrolling to sections
       document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           e.preventDefault();
@@ -228,7 +245,6 @@ body.dark-mode .project-btn:hover {
       });
     });
 
-    // Toggle dark mode
     function toggleMode() {
       document.body.classList.toggle('dark-mode');
     }
@@ -249,3 +265,4 @@ body.dark-mode .project-btn:hover {
   </script>
 </body>
 </html>
+
