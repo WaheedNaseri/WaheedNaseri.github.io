@@ -104,8 +104,15 @@ body:not(.dark-mode) .btn {
 }
 
     }
-    .inline-icon {
-      width: 24px; height: 24px; vertical-align: middle; margin-right: 12px;
+   .inline-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;  /* Ensures the image covers the container without distortion */
+  vertical-align: middle;
+  margin-right: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+}
     }
     .contact-info a { color: #00bcd4; text-decoration: none; }
   </style>
@@ -120,7 +127,7 @@ body:not(.dark-mode) .btn {
 
   <header>
     <img src="profile.jpg" alt="Waheed Naseri" class="profile-pic" loading="lazy">
-    <h1><img src="logo.png" alt="Logo" class="inline-icon">Hi, I'm Waheed Naseri</h1>
+    <h1><img src="logo.png" alt="Python Logo" class="inline-icon">Hi, I'm Waheed Naseri</h1>
     <p>Python Developer focused on automation, web scraping, and data cleaning.</p>
   </header>
 
