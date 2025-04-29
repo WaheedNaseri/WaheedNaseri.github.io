@@ -72,12 +72,37 @@
   border-radius: 30px;
   text-decoration: none;
   transition: background 0.3s;
+}/* Common button styles */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: white; /* Default color for text */
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
 }
-    .btn:hover { background: #0097a7; }
-    .dark-mode .btn:hover { background: #007c82; }
-    footer {
-      padding: 20px; background: #222; color: #bbb;
-      font-size: 14px; text-align: center;
+
+/* Hover effect */
+.btn:hover {
+  background: #0097a7;
+}
+
+/* Dark mode adjustments */
+.dark-mode .btn {
+  color: #fff; /* Ensure text is white in dark mode */
+}
+
+.dark-mode .btn:hover {
+  background: #007c82;
+}
+
+/* Light mode adjustments */
+body:not(.dark-mode) .btn {
+  color: #222; /* Dark text color for light mode */
+}
+
     }
     .inline-icon {
       width: 24px; vertical-align: middle; margin-right: 8px;
