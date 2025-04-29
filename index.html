@@ -5,41 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Waheed Naseri - Python Developer</title>
 
-  <meta name="description" content="Waheed Naseri | Python Developer specializing in web scraping, automation, and data cleaning.">
-  <meta property="og:title" content="Waheed Naseri - Python Developer">
-  <meta property="og:description" content="Automation, scraping, and data cleaning expert.">
-  <meta property="og:image" content="profile.jpg">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Waheed Naseri | Python Developer specializing in web scraping, automation, and data cleaning." />
+  <meta property="og:title" content="Waheed Naseri - Python Developer" />
+  <meta property="og:description" content="Automation, scraping, and data cleaning expert." />
+  <meta property="og:image" content="profile.jpg" />
+  <meta property="og:type" content="website" />
 
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
     :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --heading-color: #ffffff;
-      --card-bg: #1e1e1e;
-      --nav-bg: #1e1e1e;
-      --link-color: #00bcd4;
-      --footer-bg: #1e1e1e;
+      --bg-color: #e0eafc;
+      --bg-gradient: linear-gradient(to right, #e0eafc, #cfdef3);
+      --text-color: #222;
+      --subtext-color: #555;
+      --card-bg: #fff;
+      --nav-bg: #222;
+      --nav-text: #fff;
+      --btn-bg: #00bcd4;
+      --btn-bg-hover: #0097a7;
+      --footer-color: #bbb;
     }
 
-    body.light-mode {
-      --bg-color: #f4f6f8;
-      --text-color: #333;
-      --heading-color: #111;
-      --card-bg: #ffffff;
-      --nav-bg: #ffffff;
-      --link-color: #0077b6;
-      --footer-bg: #f1f1f1;
+    body.dark {
+      --bg-color: #0f172a;
+      --bg-gradient: none;
+      --text-color: #f8fafc;
+      --subtext-color: #cbd5e1;
+      --card-bg: #1e293b;
+      --nav-bg: #0f172a;
+      --nav-text: #f8fafc;
+      --btn-bg: #0ea5e9;
+      --btn-bg-hover: #0284c7;
+      --footer-color: #94a3b8;
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
+      background: var(--bg-gradient, var(--bg-color));
       color: var(--text-color);
       scroll-behavior: smooth;
       transition: background 0.3s, color 0.3s;
@@ -52,14 +58,14 @@
       background: var(--nav-bg);
       padding: 15px 20px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
-    nav a {
-      color: var(--text-color);
+    nav .links a {
+      color: var(--nav-text);
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
@@ -67,47 +73,25 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: var(--link-color);
+    nav .links a:hover {
+      color: var(--btn-bg);
     }
 
-    .toggle-switch {
-      position: absolute;
-      right: 20px;
-      top: 15px;
-    }
-
-    .toggle-switch input {
-      display: none;
-    }
-
-    .toggle-slider {
-      width: 50px;
-      height: 26px;
-      background: #888;
-      border-radius: 50px;
-      position: relative;
+    .toggle-btn {
       cursor: pointer;
-    }
-
-    .toggle-slider::before {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      width: 20px;
-      height: 20px;
-      background: #fff;
-      border-radius: 50%;
+      background: none;
+      border: 2px solid var(--btn-bg);
+      color: var(--btn-bg);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 14px;
+      font-weight: bold;
       transition: 0.3s;
     }
 
-    input:checked + .toggle-slider::before {
-      transform: translateX(24px);
-    }
-
-    input:checked + .toggle-slider {
-      background: #00bcd4;
+    .toggle-btn:hover {
+      background: var(--btn-bg);
+      color: white;
     }
 
     header {
@@ -126,17 +110,28 @@
       height: 140px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       margin-bottom: 20px;
     }
 
-    h1, h2, h3 {
-      color: var(--heading-color);
+    h1 {
+      font-size: 42px;
+      color: var(--text-color);
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: var(--text-color);
     }
 
     p {
       font-size: 18px;
-      color: var(--text-color);
+      color: var(--subtext-color);
       max-width: 600px;
       margin: 0 auto;
       line-height: 1.8;
@@ -153,7 +148,7 @@
       max-width: 700px;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: 0.3s;
     }
 
@@ -165,7 +160,7 @@
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
-      background: var(--link-color);
+      background: var(--btn-bg);
       color: white;
       border-radius: 30px;
       text-decoration: none;
@@ -173,19 +168,20 @@
     }
 
     .project-btn:hover {
-      opacity: 0.9;
+      background: var(--btn-bg-hover);
     }
 
     .contact-info a {
-      color: var(--link-color);
+      color: var(--btn-bg);
       text-decoration: none;
     }
 
     footer {
       padding: 20px;
-      background: var(--footer-bg);
-      color: #999;
+      background: var(--nav-bg);
+      color: var(--footer-color);
       font-size: 14px;
+      text-align: center;
     }
   </style>
 </head>
@@ -193,25 +189,22 @@
 <body>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <div class="toggle-switch">
-      <label>
-        <input type="checkbox" id="modeToggle">
-        <span class="toggle-slider"></span>
-      </label>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
+    <button class="toggle-btn" id="modeToggle">Dark Mode</button>
   </nav>
 
   <header>
-  <img src="profile.jpg" alt="Waheed Naseri" class="profile-pic">
-  <h1>
-    <img src="logo.png" alt="Logo" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 10px;">
-    Hi, I'm Waheed Naseri
-  </h1>
-  <p>Python Developer focused on automation, web scraping, and data cleaning.</p>
-</header>
+    <img src="profile.jpg" alt="Waheed Naseri" class="profile-pic" />
+    <h1>
+      <img src="logo.png" alt="Logo" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 10px;">
+      Hi, I'm Waheed Naseri
+    </h1>
+    <p>Python Developer focused on automation, web scraping, and data cleaning.</p>
+  </header>
 
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
@@ -255,11 +248,19 @@
     &copy; 2025 Waheed Naseri | All Rights Reserved
   </footer>
 
-  <!-- AOS and dark/light mode scripts -->
+  <!-- AOS and toggle script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
 
+    // Light/Dark Mode Toggle
+    const toggleBtn = document.getElementById('modeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+    });
+
+    // Smooth Scroll Offset
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -270,31 +271,7 @@
         });
       });
     });
-
-    // Dark/Light mode toggle
-    const toggle = document.getElementById('modeToggle');
-    const body = document.body;
-
-    function setMode(mode) {
-      if (mode === 'light') {
-        body.classList.add('light-mode');
-        toggle.checked = true;
-      } else {
-        body.classList.remove('light-mode');
-        toggle.checked = false;
-      }
-    }
-
-    toggle.addEventListener('change', () => {
-      const mode = toggle.checked ? 'light' : 'dark';
-      setMode(mode);
-      localStorage.setItem('mode', mode);
-    });
-
-    // Load mode preference on page load
-    const savedMode = localStorage.getItem('mode') || 'dark';
-    setMode(savedMode);
   </script>
+
 </body>
 </html>
-
