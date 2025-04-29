@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Waheed Naseri - Python Developer</title>
 
-  <meta name="description" content="Waheed Naseri | Python Developer specializing in web scraping, automation, and data cleaning." />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <meta name="description" content="Waheed Naseri | Python Developer specializing in web scraping, automation, and data cleaning.">
+  <meta name="keywords" content="Waheed Naseri, Python Developer, Web Scraping, Automation, Data Cleaning">
+  <meta name="author" content="Waheed Naseri">
+  <meta property="og:title" content="Waheed Naseri - Python Developer">
+  <meta property="og:description" content="Automation, scraping, and data cleaning expert.">
+  <meta property="og:image" content="profile.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to right, #e0eafc, #cfdef3);
-      color: #222;
       scroll-behavior: smooth;
-      transition: background 0.5s, color 0.5s;
+      transition: background 0.3s, color 0.3s;
     }
     body.dark-mode {
       background: #121212;
-      color: #ddd;
+      color: #e0e0e0;
     }
-
     nav {
       position: fixed;
       width: 100%;
@@ -31,14 +36,13 @@
       background: #222;
       padding: 15px 20px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: center;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
     nav a {
       color: #fff;
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
       font-size: 18px;
@@ -47,73 +51,76 @@
     nav a:hover {
       color: #00bcd4;
     }
-
-    .toggle-btn {
+    .toggle-mode {
+      position: absolute;
+      right: 20px;
+      top: 15px;
       background: #00bcd4;
-      color: white;
       border: none;
-      border-radius: 20px;
+      color: white;
       padding: 6px 12px;
+      border-radius: 20px;
       cursor: pointer;
-      font-weight: bold;
     }
-
     header {
       text-align: center;
       padding: 150px 20px 60px;
+      animation: fadeIn 2s ease;
     }
-
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
     .profile-pic {
       width: 140px;
       height: 140px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       margin-bottom: 20px;
     }
-
     h1 {
       font-size: 42px;
+      color: #222;
     }
     h2 {
       font-size: 32px;
+      color: #222;
       margin-bottom: 20px;
     }
     h3 {
       font-size: 24px;
+      color: #333;
     }
     p {
       font-size: 18px;
+      color: #555;
       max-width: 600px;
       margin: 0 auto;
       line-height: 1.8;
     }
-
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode p {
+      color: #e0e0e0;
+    }
     section {
       padding: 80px 20px;
       text-align: center;
     }
-
     .project {
       background: #fff;
       margin: 20px auto;
       max-width: 700px;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
-
-    body.dark-mode .project {
-      background: #1e1e1e;
-      color: #ccc;
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
-    }
-
     .project:hover {
       transform: translateY(-5px);
     }
-
     .project-btn {
       display: inline-block;
       margin-top: 15px;
@@ -124,77 +131,57 @@
       text-decoration: none;
       transition: background 0.3s;
     }
-
     .project-btn:hover {
       background: #0097a7;
     }
-
-    body.dark-mode .project-btn {
-      background: #0097a7;
-    }
-
     .contact-info a {
       color: #00bcd4;
       text-decoration: none;
     }
-
     footer {
       padding: 20px;
       background: #222;
       color: #bbb;
       font-size: 14px;
     }
-
-    body.dark-mode footer {
-      background: #111;
-    }
   </style>
 </head>
-
 <body>
 
   <nav>
-    <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Mode</button>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle-mode" onclick="toggleMode()">Toggle Mode</button>
   </nav>
 
   <header>
-    <img src="profile.jpg" alt="Waheed Naseri" class="profile-pic" />
-    <h1>
-      <img src="logo.png" alt="Python Logo" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 10px;">
-      Hi, I'm Waheed Naseri
-    </h1>
+    <img src="profile.webp" alt="Waheed Naseri" class="profile-pic" loading="lazy">
+    <h1><img src="favicon.ico" alt="Logo" style="width:24px; vertical-align:middle; margin-right:8px;">Hi, I'm Waheed Naseri</h1>
     <p>Python Developer focused on automation, web scraping, and data cleaning.</p>
   </header>
 
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>I’m passionate about solving real-world problems through automation and data.</p>
+    <p>I’m passionate about solving real-world problems through automation and data. I specialize in Python projects that scrape, clean, and organize information efficiently for businesses.</p>
   </section>
 
   <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
-
     <div class="project">
       <h3>Web Scraping Tool</h3>
-      <p>Python scraper to collect structured data from multiple websites and APIs.</p>
-      <a href="#" class="project-btn">View Code</a>
+      <p>Developed a Python scraper to collect structured data from multiple websites and APIs.</p>
+      <a href="https://github.com/yourprojectlink" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
     </div>
-
     <div class="project">
       <h3>Data Cleaning Automation</h3>
-      <p>Script to automate cleaning and organizing messy datasets.</p>
-      <a href="#" class="project-btn">View Code</a>
+      <p>Built a script that automates cleaning and organizing messy datasets into actionable insights.</p>
+      <a href="https://github.com/yourprojectlink" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
     </div>
-
     <div class="project">
       <h3>Portfolio Website</h3>
-      <p>This responsive portfolio was made with HTML, CSS, and JavaScript.</p>
-      <a href="https://github.com/waheednaseri/waheednaseri.github.io" class="project-btn" target="_blank">View Code</a>
+      <p>This responsive portfolio you’re browsing now is made with pure HTML, CSS, and a little JavaScript!</p>
+      <a href="https://github.com/waheednaseri/waheednaseri.github.io" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
     </div>
   </section>
 
@@ -203,7 +190,7 @@
     <p>If you'd like to work with me or have questions, feel free to reach out!</p>
     <div class="contact-info">
       <p>Email: <a href="mailto:waheed.reyhan@gmail.com">waheed.reyhan@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/waheednaseri" target="_blank">github.com/waheednaseri</a></p>
+      <p>GitHub: <a href="https://github.com/waheednaseri" target="_blank" rel="noopener noreferrer">github.com/waheednaseri</a></p>
       <p><a href="resume.pdf" download class="project-btn">Download Resume</a></p>
     </div>
   </section>
@@ -212,25 +199,35 @@
     &copy; 2025 Waheed Naseri | All Rights Reserved
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS and toggle mode script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script>
     AOS.init();
-
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-
     document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-          top: target.offsetTop - 80,
-          behavior: 'smooth'
-        });
+        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
       });
     });
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
   </script>
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Waheed Naseri",
+    "jobTitle": "Python Developer",
+    "url": "https://waheednaseri.github.io",
+    "sameAs": [
+      "https://github.com/waheednaseri"
+    ]
+  }
+  </script>
 </body>
 </html>
+
