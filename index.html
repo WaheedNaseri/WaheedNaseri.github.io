@@ -1,107 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Waheed Naseri - Python Developer</title>
-  
+
   <meta name="description" content="Waheed Naseri | Python Developer specializing in web scraping, automation, and data cleaning.">
+  <meta property="og:title" content="Waheed Naseri - Python Developer">
+  <meta property="og:description" content="Automation, scraping, and data cleaning expert.">
+  <meta property="og:image" content="profile.jpg">
+  <meta property="og:type" content="website">
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --heading-color: #ffffff;
+      --card-bg: #1e1e1e;
+      --nav-bg: #1e1e1e;
+      --link-color: #00bcd4;
+      --footer-bg: #1e1e1e;
+    }
+
+    body.light-mode {
+      --bg-color: #f4f6f8;
+      --text-color: #333;
+      --heading-color: #111;
+      --card-bg: #ffffff;
+      --nav-bg: #ffffff;
+      --link-color: #0077b6;
+      --footer-bg: #f1f1f1;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      background-color: var(--bg-color);
+      color: var(--text-color);
       scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
     }
+
     nav {
       position: fixed;
       width: 100%;
       top: 0;
-      background: #222;
+      background: var(--nav-bg);
       padding: 15px 20px;
       display: flex;
       justify-content: center;
+      align-items: center;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     }
+
     nav a {
-      color: #fff;
+      color: var(--text-color);
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
       font-size: 18px;
+      transition: color 0.3s;
     }
+
     nav a:hover {
-      color: #00bcd4;
+      color: var(--link-color);
     }
+
+    .toggle-switch {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+
+    .toggle-switch input {
+      display: none;
+    }
+
+    .toggle-slider {
+      width: 50px;
+      height: 26px;
+      background: #888;
+      border-radius: 50px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .toggle-slider::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    input:checked + .toggle-slider::before {
+      transform: translateX(24px);
+    }
+
+    input:checked + .toggle-slider {
+      background: #00bcd4;
+    }
+
     header {
       text-align: center;
       padding: 150px 20px 60px;
       animation: fadeIn 2s ease;
     }
+
     @keyframes fadeIn {
       0% {opacity: 0;}
       100% {opacity: 1;}
     }
+
     .profile-pic {
       width: 140px;
       height: 140px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
       margin-bottom: 20px;
     }
-    h1 {
-      font-size: 42px;
-      color: #222;
+
+    h1, h2, h3 {
+      color: var(--heading-color);
     }
+
     p {
-      font-size: 20px;
-      color: #555;
+      font-size: 18px;
+      color: var(--text-color);
       max-width: 600px;
       margin: 0 auto;
       line-height: 1.8;
     }
+
     section {
       padding: 80px 20px;
       text-align: center;
     }
+
     .project {
-      background: #fff;
+      background: var(--card-bg);
       margin: 20px auto;
       max-width: 700px;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       transition: 0.3s;
     }
+
     .project:hover {
       transform: translateY(-5px);
     }
+
     .project-btn {
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
-      background: #00bcd4;
+      background: var(--link-color);
       color: white;
       border-radius: 30px;
       text-decoration: none;
+      transition: background 0.3s;
     }
+
     .project-btn:hover {
-      background: #0097a7;
+      opacity: 0.9;
     }
+
     .contact-info a {
-      color: #00bcd4;
+      color: var(--link-color);
       text-decoration: none;
     }
+
     footer {
       padding: 20px;
-      background: #222;
-      color: #bbb;
+      background: var(--footer-bg);
+      color: #999;
       font-size: 14px;
     }
   </style>
@@ -113,6 +196,12 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+    <div class="toggle-switch">
+      <label>
+        <input type="checkbox" id="modeToggle">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
   </nav>
 
   <header>
@@ -121,41 +210,40 @@
     <p>Python Developer focused on automation, web scraping, and data cleaning.</p>
   </header>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>I’m passionate about solving real-world problems through automation and data. I specialize in Python projects that scrape, clean, and organize information efficiently for businesses.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="fade-up">
     <h2>Projects</h2>
 
     <div class="project">
       <h3>Web Scraping Tool</h3>
       <p>Developed a Python scraper to collect structured data from multiple websites and APIs.</p>
-      <a href="https://github.com/yourprojectlink" class="project-btn" target="_blank">View Code</a>
+      <a href="https://github.com/yourprojectlink" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
     </div>
 
     <div class="project">
       <h3>Data Cleaning Automation</h3>
       <p>Built a script that automates cleaning and organizing messy datasets into actionable insights.</p>
-      <a href="https://github.com/yourprojectlink" class="project-btn" target="_blank">View Code</a>
+      <a href="https://github.com/yourprojectlink" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
     </div>
 
     <div class="project">
       <h3>Portfolio Website</h3>
       <p>This responsive portfolio you’re browsing now is made with pure HTML, CSS, and a little JavaScript!</p>
-      <a href="https://github.com/waheednaseri/waheednaseri.github.io" class="project-btn" target="_blank">View Code</a>
+      <a href="https://github.com/waheednaseri/waheednaseri.github.io" class="project-btn" target="_blank" rel="noopener noreferrer">View Code</a>
     </div>
-
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <p>If you'd like to work with me or have questions, feel free to reach out!</p>
 
     <div class="contact-info">
       <p>Email: <a href="mailto:waheed.reyhan@gmail.com">waheed.reyhan@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/waheednaseri" target="_blank">github.com/waheednaseri</a></p>
+      <p>GitHub: <a href="https://github.com/waheednaseri" target="_blank" rel="noopener noreferrer">github.com/waheednaseri</a></p>
       <p><a href="resume.pdf" download class="project-btn">Download Resume</a></p>
     </div>
   </section>
@@ -164,5 +252,46 @@
     &copy; 2025 Waheed Naseri | All Rights Reserved
   </footer>
 
+  <!-- AOS and dark/light mode scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Dark/Light mode toggle
+    const toggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    function setMode(mode) {
+      if (mode === 'light') {
+        body.classList.add('light-mode');
+        toggle.checked = true;
+      } else {
+        body.classList.remove('light-mode');
+        toggle.checked = false;
+      }
+    }
+
+    toggle.addEventListener('change', () => {
+      const mode = toggle.checked ? 'light' : 'dark';
+      setMode(mode);
+      localStorage.setItem('mode', mode);
+    });
+
+    // Load mode preference on page load
+    const savedMode = localStorage.getItem('mode') || 'dark';
+    setMode(savedMode);
+  </script>
 </body>
 </html>
+
