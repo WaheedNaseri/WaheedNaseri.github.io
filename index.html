@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Waheed Naseri | Python Automation Developer</title>
@@ -13,33 +16,44 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
 
     <div class="mesh"></div>
 
+    <!-- ================= NAVIGATION ================= -->
+
     <nav>
 
-    <div class="logo">WN</div>
+        <a href="#" class="logo">
+            WN
+        </a>
 
-    <div class="menu-toggle" id="mobile-menu">
-        ☰
-    </div>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Toggle Navigation">
 
-    <ul class="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
 
-        <li><a href="#about">About</a></li>
+        </button>
 
-        <li><a href="#services">Services</a></li>
+        <ul class="nav-links" id="nav-links">
 
-        <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
 
-        <li><a href="#contact">Contact</a></li>
+            <li><a href="#services">Services</a></li>
 
-    </ul>
+            <li><a href="#projects">Projects</a></li>
 
-</nav>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
 
     <header class="hero">
 
@@ -54,15 +68,16 @@
             </h1>
 
             <h2>
-                Python Automation Engineer</br>
+                Python Automation Engineer
+                <br>
                 Helping businesses save time through automation.
             </h2>
 
             <p class="hero-text">
 
-                I build automation tools, web scrapers and data processing
-                solutions that save businesses time and eliminate repetitive
-                work.
+                I build automation tools, web scrapers, data cleaning pipelines,
+                and business automation solutions that save companies time and
+                eliminate repetitive work.
 
             </p>
 
@@ -82,6 +97,8 @@
 
     </header>
 
+    <!-- ================= ABOUT ================= -->
+
     <section id="about">
 
         <h2>About Me</h2>
@@ -90,10 +107,9 @@
 
             <p>
 
-                I'm a Python Automation Developer who builds automation tools 
-                that eliminate repetitive work, clean messy data, 
-                and help businesses save time.
-
+                I'm a Python Automation Developer who builds automation tools,
+                web scrapers and data processing systems that eliminate repetitive
+                work and help businesses operate more efficiently.
 
             </p>
 
@@ -102,110 +118,191 @@
             <p>
 
                 My background in NGO administration, HR, logistics and finance
-                helps me understand real-world business challenges and develop
-                practical automation solutions.
+                gives me practical experience solving real business problems with
+                automation.
 
             </p>
 
         </div>
 
     </section>
+
     <!-- ================= SERVICES ================= -->
 
-<section id="services">
+    <section id="services">
 
-    <h2>What I Can Do</h2>
+        <h2>What I Can Do</h2>
 
-    <p class="section-subtitle">
-        I help businesses automate repetitive work, process data efficiently,
-        and build tools that save valuable time.
-    </p>
+        <p class="section-subtitle">
 
-    <div class="services-grid">
+            I help businesses automate repetitive tasks,
+            process data efficiently,
+            and build tools that save valuable time.
 
-        <div class="service-card">
+        </p>
 
-            <div class="service-icon">🐍</div>
+        <div class="services-grid">
 
-            <h3>Python Automation</h3>
+            <div class="service-card">
 
-            <p>
-                Automate repetitive business tasks using Python, reducing manual
-                work and increasing productivity.
-            </p>
+                <div class="service-icon">🐍</div>
+
+                <h3>Python Automation</h3>
+
+                <p>
+
+                    Automate repetitive business tasks using Python,
+                    reducing manual work and increasing productivity.
+
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">🌐</div>
+
+                <h3>Web Scraping</h3>
+
+                <p>
+
+                    Extract structured data from websites into
+                    Excel, CSV, JSON or databases automatically.
+
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">📊</div>
+
+                <h3>Data Cleaning</h3>
+
+                <p>
+
+                    Clean, organize and transform Excel and CSV
+                    datasets using Python and Pandas.
+
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">📈</div>
+
+                <h3>Excel Automation</h3>
+
+                <p>
+
+                    Build automated Excel reports,
+                    dashboards and workflows.
+
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">📄</div>
+
+                <h3>PDF Automation</h3>
+
+                <p>
+
+                    Convert PDF documents into structured Excel,
+                    CSV and database-ready formats.
+
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">⚙️</div>
+
+                <h3>API Integration</h3>
+
+                <p>
+
+                    Connect applications through APIs and automate
+                    data exchange between systems.
+
+                </p>
+
+            </div>
 
         </div>
 
-        <div class="service-card">
+    </section>
 
-            <div class="service-icon">🌐</div>
+    <!-- ================= PROJECTS ================= -->
 
-            <h3>Web Scraping</h3>
+    <section id="projects">
 
-            <p>
-                Extract structured data from websites and export it to Excel,
-                CSV, JSON or databases automatically.
-            </p>
+        <h2>Featured Projects</h2>
 
-        </div>
+        <p class="section-subtitle">
 
-        <div class="service-card">
+            Real automation projects built using Python.
 
-            <div class="service-icon">📊</div>
+        </p>
 
-            <h3>Data Cleaning</h3>
+        <div class="projects-grid">
 
-            <p>
-                Clean, organize and transform messy Excel and CSV datasets
-                using Pandas for accurate reporting.
-            </p>
+            <!-- We'll build these cards next -->
 
         </div>
 
-        <div class="service-card">
+    </section>
 
-            <div class="service-icon">📈</div>
+    <!-- ================= CONTACT ================= -->
 
-            <h3>Excel Automation</h3>
+    <section id="contact">
 
-            <p>
-                Generate reports, dashboards and automate Excel workflows,
-                saving hours of manual work.
-            </p>
+        <h2>Let's Work Together</h2>
 
-        </div>
+        <p class="section-subtitle">
 
-        <div class="service-card">
+            Interested in working together?
+            Feel free to contact me.
 
-            <div class="service-icon">📄</div>
+        </p>
 
-            <h3>PDF Automation</h3>
+        <div class="contact-links">
 
-            <p>
-                Convert PDF documents into Excel, CSV or structured datasets
-                automatically.
-            </p>
+            <a href="mailto:waheed.reyhan@gmail.com">
 
-        </div>
+                📧 Email
 
-        <div class="service-card">
+            </a>
 
-            <div class="service-icon">⚙️</div>
+            <a href="https://github.com/WaheedNaseri" target="_blank">
 
-            <h3>API Integration</h3>
+                💻 GitHub
 
-            <p>
-                Connect APIs and automate data exchange between different
-                applications and services.
-            </p>
+            </a>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Waheed Naseri.
+            Built with HTML, CSS & JavaScript.
+
+        </p>
+
+    </footer>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
