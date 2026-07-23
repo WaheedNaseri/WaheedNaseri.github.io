@@ -100,26 +100,23 @@ nav{
 
     max-width:1200px;
 
-
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
 
-
     padding:18px 30px;
-
 
     background:rgba(255,255,255,.05);
 
     backdrop-filter:blur(20px);
 
-
     border:1px solid var(--border);
 
     border-radius:30px;
 
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
 
     z-index:1000;
 
@@ -595,18 +592,12 @@ section h2{
 
 .service-card p{
 
-    .service-card p{
-
     color:#9ca3af;
 
     line-height:1.9;
 
     font-size:1.05rem;
 }
-
-}
-
-
 
 /* =========================
  CONTACT
@@ -679,8 +670,6 @@ footer{
     color:#777;
 
 }
-
-
 
 /* =========================
  MOBILE
@@ -759,13 +748,59 @@ nav{
 
 }
 
-
-
 section h2{
 
     font-size:2rem;
 
 }
+@media(max-width:768px){
+
+    nav{
+        width:90%;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:#090909;
+        flex-direction:column;
+        align-items:center;
+        padding:30px;
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .hero h2{
+        font-size:1.3rem;
+    }
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:column;
+    }
+
+    section h2{
+        font-size:2rem;
+    }
+
+}
+
+/* =========================
+SCROLLBAR
+========================= */
+
+/* =========================
+SCROLLBAR
+========================= */
 
 ::-webkit-scrollbar{
 
@@ -792,6 +827,11 @@ section h2{
     background:#22f5ff;
 
 }
+
+/* =========================
+TEXT SELECTION
+========================= */
+
 ::selection{
 
     background:var(--accent);
