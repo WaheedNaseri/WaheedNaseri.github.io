@@ -654,20 +654,45 @@ section h2{
 
 }
 
-
-
 /* =========================
  FOOTER
 ========================= */
 
-
 footer{
+
+    margin-top:40px;
+
+    padding:30px 20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
 
     text-align:center;
 
-    padding:40px;
+}
 
-    color:#777;
+footer p{
+
+    color:var(--text-muted);
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+.footer-name{
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+.footer-name:hover{
+
+    color:var(--accent);
 
 }
 
