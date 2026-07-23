@@ -30,6 +30,9 @@ body{
 
     overflow-x:hidden;
 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
 }
 
 
@@ -122,8 +125,6 @@ nav{
 
 }
 
-
-
 .logo{
 
     font-size:1.7rem;
@@ -134,8 +135,17 @@ nav{
 
     text-decoration:none;
 
+    transition:.35s ease;
+
 }
 
+.logo:hover{
+
+    transform:scale(1.08);
+
+    text-shadow:0 0 18px rgba(0,242,255,.45);
+
+}
 
 
 .nav-links{
@@ -148,9 +158,9 @@ nav{
 
 }
 
-
-
 .nav-links a{
+
+    position:relative;
 
     color:#ddd;
 
@@ -162,6 +172,31 @@ nav{
 
 }
 
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--accent);
+
+    transition:width .3s ease;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
 
 .nav-links a:hover{
 
@@ -278,20 +313,17 @@ nav{
 
 .hero-text{
 
-    max-width:750px;
+    max-width:720px;
 
-    margin:25px auto;
+    margin:28px auto;
 
-    color:#aaa;
+    color:#9ca3af;
 
-    line-height:1.8;
+    line-height:1.9;
 
-    font-size:1.1rem;
+    font-size:1.15rem;
 
 }
-
-
-
 
 /* =========================
  BUTTONS
@@ -310,9 +342,9 @@ nav{
 
     display:inline-block;
 
-    padding:15px 32px;
+    padding:17px 36px;
 
-    border-radius:50px;
+    border-radius:999px;
 
     margin:10px;
 
@@ -320,11 +352,11 @@ nav{
 
     font-weight:700;
 
-    transition:.3s;
+    font-size:1rem;
+
+    transition:all .35s ease;
 
 }
-
-
 
 .primary{
 
@@ -347,13 +379,13 @@ nav{
 
 .btn:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-6px) scale(1.02);
 
-    box-shadow:0 15px 30px rgba(0,242,255,.25);
+    box-shadow:
+
+    0 18px 35px rgba(0,242,255,.25);
 
 }
-
-
 
 /* =========================
  SECTIONS
@@ -366,20 +398,20 @@ section{
 
     margin:auto;
 
-    padding:100px 20px;
+    padding:120px 20px;
 
 }
 
 
 section h2{
 
-    font-size:2.7rem;
+    font-size:3rem;
 
-    margin-bottom:30px;
+    margin-bottom:40px;
+
+    letter-spacing:-1px;
 
 }
-
-
 
 .section-subtitle{
 
@@ -410,7 +442,7 @@ section h2{
     border:1px solid var(--border);
 
 
-    padding:40px;
+    padding:50px;
 
 
     border-radius:25px;
@@ -475,8 +507,10 @@ section h2{
     min-height:340px;
 
 
-    transition:.35s;
-
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
 
     backdrop-filter:blur(18px);
 
@@ -495,7 +529,10 @@ section h2{
 
 
     box-shadow:
-    0 20px 40px rgba(0,242,255,.15);
+
+    0 20px 40px rgba(0,0,0,.45),
+
+    0 0 25px rgba(0,242,255,.08);
 
 
 }
@@ -548,9 +585,9 @@ section h2{
 
 .service-card h3{
 
-    font-size:1.4rem;
+    font-size:1.8rem;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
 
 }
 
@@ -558,9 +595,14 @@ section h2{
 
 .service-card p{
 
-    color:#aaa;
+    .service-card p{
 
-    line-height:1.8;
+    color:#9ca3af;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+}
 
 }
 
@@ -614,6 +656,10 @@ section h2{
     background:var(--accent);
 
     color:black;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(0,242,255,.2);
 
 }
 
@@ -721,5 +767,36 @@ section h2{
 
 }
 
+::-webkit-scrollbar{
 
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#050505;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--accent);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#22f5ff;
+
+}
+::selection{
+
+    background:var(--accent);
+
+    color:black;
+
+}
 }
